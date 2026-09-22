@@ -6,5 +6,8 @@ export interface Producte {
   nom: string;
   preu: number;
   disponible: boolean;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 }
