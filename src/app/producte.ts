@@ -16,11 +16,5 @@ export class Producte {
     
     getPreuAmbIVA(): number {
         return this.preu * 1.21; //Afegim un 21% d'IVA
-    }
-
-
-
-
-
-    
+    }   
 }
