@@ -6,4 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./perfil.css']
 })
 export class Perfil {
+  nom: String = 'Àlex';
+  cognom: String = 'Camacho';
+  edat: Number = 19
+  cicle: String = 'Desenvolupament d\'aplicacions Web';
 }
+
+
+
