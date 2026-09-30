@@ -1,11 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Producte } from './interfaces/producte';
-import{ Producte as ProducteClass } from './producte'; // Importem la classe Producte amb un alias per evitar conflictes amb la interficie Producte
-import { Joc } from './interfaces/joc'; // Importar la interficie Joc
-import { llistaJocs } from './interfaces/llistaJocs'; // Importar la classe llistaJocs
-import { saludar, esMajorEdat, sumarArray } from './funcions';
-import { Alumne } from './alumne';
+
 
 @Component({
   selector: 'app-root',
@@ -91,63 +86,6 @@ provar(): void {
     this.mostrarDescomptePopup(this.p3);
   }
 */
-  // PART B - DADES MOCK I FUNCIONS
-
-  // 1. Array de jocs de tipus Joc
-jocs: Joc[] = [
-  { id: 1, nom: 'Monopoly', preu: 29.99, disponible: true, descripcio: 'Joc de taula clàssic' },
-  { id: 2, nom: 'Catan', preu: 39.99, disponible: false, descripcio: 'Joc de taula estratègic' },
-  { id: 3, nom: 'Scrabble', preu: 19.99, disponible: true },
-  { id: 4, nom: 'Risk', preu: 49.99, disponible: true, descripcio: 'Joc de taula de guerra i estratègia' },
-  { id: 5, nom: 'Cluedo', preu: 24.99, disponible: false, descripcio: 'Joc de taula de misteri i investigació' }
-];
-
-//2. Funció per obtenir els jocs disponibles
-obtenirJocsDisponibles(): Joc[] {
-  return this.jocs.filter(joc => joc.disponible);
-}
-
-//3. Funció findbyId que retorni un joc segons el seu id
-findById(id: number): Joc | undefined {
-  return this.jocs.find(joc => joc.id === id);  
-}
-//4. Funció formatarElement(joc) que retorni informació
-formatarElement(joc: Joc): string {
-  return `Nom: ${joc.nom}, Preu: ${joc.preu}, Disponible: ${joc.disponible ? 'Sí' : 'No'}, Descripció: ${joc.descripcio || 'No disponible'}`; 
-}
-
-colleccio = new llistaJocs('Jocs de taula', this.jocs);
-
-provarColleccio(): void {
-  console.log('Total jocs:', this.colleccio.totalJocs);
-
-  this.colleccio.afegirJoc({
-    id: 6,
-    nom: 'UNO',
-    preu: 10,
-    disponible: true
-  });
-
-  console.log('Després d\'afegir:', this.colleccio.totalJocs);
-
-  this.colleccio.eliminarJoc(1);
-
-  console.log('Després d\'eliminar:', this.colleccio.totalJocs);
-}
-
-constructor() {
-  // 🔹 Funciones auxiliares
-  console.log(saludar('Alex'));
-  console.log(esMajorEdat(20));
-  console.log(sumarArray([1, 2, 3, 4]));
-
-  // 🔹 Alumne
-  const a1 = new Alumne('Alex', 20, 'DAW', [7, 8, 6]);
-  const a2 = new Alumne('Monte', 17, 'SMX', [4, 5, 3]);
-
-  console.log(a1.presentar(), a1.haAprobat);
-  console.log(a2.presentar(), a2.haAprobat);
-}
-
+ 
 }
 
