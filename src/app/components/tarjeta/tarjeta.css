@@ -1,0 +1,15 @@
+/* Aquest fitxer conté els estils encapsulats --> només afecten aquest component */
+
+.tarjeta {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 250px;
+    margin: 8px;
+    display: inline-block;
+    }
+
+    h2 {
+        color: #1F4E79;
+        font-size: 1.1em;
+    }
