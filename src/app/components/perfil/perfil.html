@@ -1,5 +1,8 @@
 <div class="perfil">
-  <h3>Nom complet: Àlex Camacho</h3>
-  <p>Edat: 18 anys</p>
-  <p> Hola, em dic Àlex i tinc 18 anys </p>
+  <h3>Nom complet: {{nom}} {{cognom}}</h3>
+  <p>Edat: {{edat}} anys</p>
+  <p> Cicle: {{cicle}}</p>
+<p>Major d'edat: {{ edat >= 18 ? 'Sí' : 'No' }}</p>
+<p>Any de naixement: {{ 2026 - edat }}</p>
+<p>Nom complet en majúscules: {{nomComplet.toUpperCase()}}</p>
 </div>
