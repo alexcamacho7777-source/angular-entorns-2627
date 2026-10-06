@@ -21,18 +21,16 @@
 }
 -->
 
-
-@for (producte of productes; track producte.id; let i = $index) {
-  <p>{{ i }} - Nom: {{ producte.nom }} - Preu: {{ producte.preu }} - Estoc: {{ producte.estoc }}</p>
-<app-tarjeta></app-tarjeta>
-} 
-
-
 <!-- crea un array de 5 elements al app.ts
 usa @for per mostrar els elements de l'array
 $index per mostrar l'ordre 
 -->
-
+<br>
+@for (producte of productes; track producte; let i = $index) {
+  <app-tarjeta [producte]="producte"></app-tarjeta>
+} @empty {
+  <p>No hi ha productes per mostrar</p>
+}
 
 
 

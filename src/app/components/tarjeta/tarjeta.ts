@@ -26,14 +26,13 @@ Permet incrustar expressions TS dins de l'HTML, angular avalua l'expressió i mn
 amb {{nom}} --> el valor pot canviar i l'HTML s'actualitza automàticament, hardcoded es sempre estatic
 
 */
-  producte: Producte = {
+  producteInicial: Producte = {
     id: 1,
     nom: 'Ordinador Gamer Pro',
     preu: 1299,
     estoc: 0,
-  }
-  
-  
+  };
+
   /* Un GETTER es un tipus especial de propietat calculada. En lloc de guardar un valor, el CALCULA cada cop que s'accedeix.
   get nomDelGetter(): tipusDeRetorn {
   return valorCalculat;
@@ -53,6 +52,12 @@ AL TEMPLATE s'usa com una PROPIETAT, sense parentesis {{nomDelGetter}} -> mostra
   get estatDisponibilitat(): string {
     return this.estoc > 0 ? 'Disponible' : 'No disponible';
   }
+
+
+
+  @Input() producte!: Producte;
+
+
 
 
 }

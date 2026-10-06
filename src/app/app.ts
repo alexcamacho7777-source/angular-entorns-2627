@@ -20,7 +20,10 @@ export class App {
   productes: Producte[] = [
     {nom: 'Teclat', preu: 89.99, id: 1, estoc: 15},
     {nom: 'Monitor', preu: 350.99, id: 2, estoc: 5},
-    {nom: 'Ratolí', preu: 5.99, id: 3, estoc: 25}
+    {nom: 'Ratolí', preu: 5.99, id: 3, estoc: 25},
+    {nom: 'Pc Gamer', preu: 899.99, id: 4, estoc: 5},
+    {nom: 'Auriculars', preu: 75.99, id: 5, estoc: 10}
+
   ];
 
 }
