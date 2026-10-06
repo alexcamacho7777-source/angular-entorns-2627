@@ -31,7 +31,6 @@ amb {{nom}} --> el valor pot canviar i l'HTML s'actualitza automàticament, hard
     nom: 'Ordinador Gamer Pro',
     preu: 1299,
     estoc: 0,
-    descripcio: 'Ordinador d\'alt rendiment per a jocs i aplicacions exigents'
   }
   
   

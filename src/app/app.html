@@ -1,5 +1,41 @@
 <!-- app.html -->
  <h2>El meu perfil</h2>
  <app-perfil></app-perfil>
+<app-perfil></app-perfil>
+
+<!-- En una sola linia tants elements com calguin 
+@for (ciutat of ciutats; track ciutat) {
+  <p>Ciutat: {{ ciutat }}</p>
+}
+-->
+
+<!-- index es una variable que conte la posició de l'element 
+@for (ciutat of ciutats; track ciutat; let i = $index) {
+  <p>{{ i }} - Ciutat: {{ ciutat }}</p>
+}
+
+@for (ciutat of ciutats; track ciutat) {
+  <p>Ciutat: {{ ciutat }}</p>
+} @empty {
+  <p>No hi ha ciutats per mostrar</p>
+}
+-->
+
+
+@for (producte of productes; track producte.id; let i = $index) {
+  <p>{{ i }} - Nom: {{ producte.nom }} - Preu: {{ producte.preu }} - Estoc: {{ producte.estoc }}</p>
+<app-tarjeta></app-tarjeta>
+} 
+
+
+<!-- crea un array de 5 elements al app.ts
+usa @for per mostrar els elements de l'array
+$index per mostrar l'ordre 
+-->
+
+
+
+
+
 
 <router-outlet />
