@@ -17,4 +17,37 @@ h2 {
     font-size: 1.1rem;
 }
 
+.destacat,
+.etiqueta {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.destacat {
+    background-color: #e8f0fe;
+    color: #1f4e79;
+}
+
+.etiqueta {
+    margin-bottom: 8px;
+}
+
+.gratuit {
+    background-color: #e2f3e8;
+    color: #22643a;
+}
+
+.oferta {
+    background-color: #fff1cf;
+    color: #805500;
+}
+
+.premium {
+    background-color: #fce3dd;
+    color: #8b2f20;
+}
+
 /*COM MOSTRO AQUEST COMPONENT??????*/

@@ -2,7 +2,7 @@
 
 import { Component } from '@angular/core';
 import { Producte } from '../../interfaces/producte';
-
+import { Producte2 } from '../../interfaces/producte2';
 @Component({
   selector: 'app-tarjeta',  /* Per usar-lo al HTML d'altres components, com una etiqueta HTML personalitzada*/
   imports: [],
@@ -22,13 +22,16 @@ export class Tarjeta {
     categoria: 'Informàtica',
   };
 
-   producte2 : Producte = {
-    id: 2,
-    nom: 'Ordinador Gamer',
-    preu: 1099,
-    estoc: 2,
-    categoria: 'Informàtica',
-  };
+  productes2: Producte2[] = [
+    {
+      nom: 'Castanya',
+      preu: 12,
+      estoc: 60,
+      categoria: 'Aliment',
+      descripcio: 'Castanyes bones',
+    },
+   
+  ];
 
   /* Getter --> és un tipus especial de propietat calculada. En lloc de guardar un valor, el CALCULA cada cop que s'accedeix.
   get nomDelGetter(): TipusRetorn {
@@ -48,8 +51,6 @@ export class Tarjeta {
       if (this.producte.estoc < 3) return 'Últimes unitats';
       return 'Disponible';
     }
-
-
 
 }
 

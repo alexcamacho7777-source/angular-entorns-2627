@@ -15,6 +15,35 @@
     <p class="preu"> {{ producte.preu }} € (+IVA): {{preuAmbIva}} €</p>
     <p> Estoc: {{producte.estoc }} unitats</p>
     <p> {{estatDisponibilitat}}</p>
+
+@if(producte.estoc > 0){
+    <p>{{estatDisponibilitat}}</p>
+} @else{
+<p>No disponible</p>
+}
+
 </div>
+
+
+@for (producte2 of productes2; track producte2.nom) {
+    <div class="tarjeta">
+        <h2>{{producte2.nom}}</h2>
+        <p class="categoria">{{producte2.categoria}}</p>
+        @if (producte2.categoria === 'Informàtica') {
+            <div class="destacat">Destacat</div>
+        }
+        <p class="preu">{{producte2.preu}} €</p>
+        @if (producte2.preu === 0) {
+            <span class="etiqueta gratuit">Gratuït</span>
+        } @else if (producte2.preu < 20) {
+            <span class="etiqueta oferta">Oferta</span>
+        } @else if (producte2.preu > 100) {
+            <span class="etiqueta premium">Premium</span>
+        }
+        <p>Estoc: {{producte2.estoc}} unitats</p>
+        <p>{{producte2.descripcio}}</p>
+    </div>
+}
+
 
 
