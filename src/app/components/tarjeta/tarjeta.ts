@@ -30,7 +30,27 @@ export class Tarjeta {
       categoria: 'Aliment',
       descripcio: 'Castanyes bones',
     },
-   
+    {
+      nom: 'Macarrons',
+      preu: 6,
+      estoc: 25,
+      categoria: 'Aliment',
+      descripcio: 'Macarrons a la carbonyara',
+    },
+    {
+      nom: 'Sushi',
+      preu: 499,
+      estoc: 8,
+      categoria: 'Aliment',
+      descripcio: 'Sushide Bob Esponga',
+    },
+    {
+      nom: 'Truita',
+      preu: 300,
+      estoc: 3,
+      categoria: 'Aliment',
+      descripcio: "Truita de patacas",
+    },
   ];
 
   /* Getter --> és un tipus especial de propietat calculada. En lloc de guardar un valor, el CALCULA cada cop que s'accedeix.
